@@ -14,7 +14,7 @@ fun cardsWonFrom(cards: List<String>, cardIndex: Int): Int {
         val indexes = cardIndex + 1..cardIndex + numOfCardsWon
         val result = numOfCardsWon + indexes.map { cardsWonFrom(cards, it) }.sum()
         cache.put(cardIndex, result)
-        result
+        return result
     }
 }
 
